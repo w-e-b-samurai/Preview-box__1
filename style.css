@@ -1,0 +1,90 @@
+body {
+	background: url('http://uconstructor.com/_ld/0/73640071.jpg');
+}
+
+.preview-box {
+	max-width: 906px;
+	margin: 100px auto;
+	font-family: 'PT Sans', sans-serif;
+	border: 1px solid #eee;
+	box-shadow: 0px 1px 10px rgba(0,0,0,.6);
+}
+
+.preview-box:after {
+	content: " ";
+	display: table;
+	clear: both;
+}
+
+.preview-box:hover {
+	cursor: pointer;
+	box-shadow: 0px 1px 8px rgba(0,0,0,.6);
+}
+
+.preview-box-container {
+	width: 300px;
+	height: 200px;
+	float: left;
+	border: 1px solid #eee;
+	position: relative;
+	overflow: hidden;
+}
+
+.preview-box-container img {
+	width: 300px;
+	height: 200px;
+}
+
+.preview-box-content {
+	position: absolute;
+	width: 280px;
+	height: 200px;
+	padding: 0 10px 5px 10px;
+	color: white;
+	background-color: rgba(64, 59, 59, 0.8);
+	transition: all 0.5s cubic-bezier(0.96, 0.56, 0.32, 1.28);
+}
+
+.preview-box-content h2 {
+	margin-top: 10px;
+	margin-bottom: 5px;
+	font-weight: 800;
+}
+
+.preview-box-content p {
+	padding-right: 15px;
+	font-weight: 400;
+}
+
+@media screen and (min-width: 924px) {
+	.preview-box-container:nth-child(2n) .preview-box-content {
+		top: 200px;
+	}
+	.preview-box-container:nth-child(2n+1) .preview-box-content {
+		top: -220px;
+	}
+	.preview-box-container:hover .preview-box-content {
+		top: 0px;
+	}
+}
+
+@media screen and (max-width: 924px){
+	.preview-box-content {
+		top: 0px;
+	}
+	.preview-box {
+		max-width: 604px;
+	}
+	.preview-box-container:last-child {
+		display: none;
+	}
+}
+
+	@media screen and (max-width: 622px){
+	.preview-box {
+		max-width: 302px;
+	}
+	.preview-box-container:last-child {
+		display: block;
+	}
+}
